@@ -7,5 +7,5 @@ object Bazar extends IOApp:
   override def run(args: List[String]): IO[ExitCode] =
     for
       config <- Config.value.load[IO]
-      _ <- IO(println(config))
+      _      <- IO(println(config))
     yield ExitCode.Success
